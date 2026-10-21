@@ -50,22 +50,24 @@
     root.classList.add('show-callbar');
   }
 
-  /* Formulaire : prépare un e-mail dans la messagerie de la personne */
+  /* Formulaire : prépare un e-mail dans la messagerie de la personne.
+     Les textes viennent des attributs data-* du formulaire (une version par langue). */
   var form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var f = form.elements;
+      var d = form.dataset || {};
       var message = f.message.value.trim();
       if (!message) { f.message.focus(); return; }
       var prenom = f.prenom.value.trim();
       var tel = f.telephone.value.trim();
       var profil = f.profil.value;
 
-      var subject = 'Prise de contact depuis le site' + (profil ? ' – ' + profil : '');
-      var lines = ['Bonjour,', '', message, ''];
+      var subject = (d.subject || 'Prise de contact depuis le site') + (profil ? ' – ' + profil : '');
+      var lines = [d.greeting || 'Bonjour,', '', message, ''];
       if (prenom) lines.push(prenom);
-      if (tel) lines.push('Téléphone : ' + tel);
+      if (tel) lines.push((d.phoneLabel || 'Téléphone :') + ' ' + tel);
 
       var href = 'mailto:sunraynice@gmail.com'
         + '?subject=' + encodeURIComponent(subject)
@@ -73,9 +75,7 @@
       window.location.href = href;
 
       var status = document.getElementById('form-status');
-      if (status) {
-        status.textContent = 'Votre messagerie devrait s’ouvrir. Si rien ne se passe, écrivez-nous directement à sunraynice@gmail.com ou appelez le 06 56 85 83 34.';
-      }
+      if (status && d.status) status.textContent = d.status;
     });
   }
 
