@@ -13,7 +13,8 @@ There's no build step and nothing to install: open `index.html` in a browser to 
 | `mentions-legales.html`, `en/…`, `ar/…` | The legal notice in each language |
 | `assets/css/style.css` | Colours, fonts and layout, shared by all languages |
 | `assets/js/main.js` | Mobile menu, the "Call / Email" bar on phones, and the contact form |
-| `assets/img/` | Photos from the flyer, the SunRay logo (SVG), and the preview images shown when the link is shared (`og-sunray.jpg`, `og-sunray-en.jpg`, `og-sunray-ar.jpg`) |
+| `assets/img/` | Photos from the flyer, the SunRay logo (`logo-sunray-240` and `logo-sunray-420`, in .webp and .jpg), and the preview images shown when the link is shared (`og-sunray.jpg`, `og-sunray-en.jpg`, `og-sunray-ar.jpg`) |
+| `favicon-32.png`, `favicon.ico`, `icon-192.png`, `apple-touch-icon.png` | Browser-tab and phone home-screen icons, made from the logo |
 | `assets/fonts/` | Lexend, plus Readex Pro for Arabic, stored with the site (no Google Fonts, so no tracking) |
 
 ## Changing the text
@@ -32,6 +33,10 @@ In your repository, click **Add file → Upload files** and drag in **everything
 3. **Share preview**: the `og:image` line near the top of each page uses a relative path. Replace it with the full address of the image (e.g. `https://your-name.github.io/sunray/assets/img/og-sunray.jpg`) so the preview appears when the link is shared.
 4. **Photos**: the images come from the flyer. To use real photos, keep the same file names in `assets/img/` (16:9 landscape for each activity).
 
+## "Faire un don" button
+
+For now it opens an email to the association with the subject "Je souhaite faire un don à SunRay". If you create an online donation page (HelloAsso, for example), replace that button's `mailto:` link with the page's address in `index.html`, `en/index.html` and `ar/index.html`.
+
 ## Contact form
 
 The form doesn't need a server. When someone sends it, their email app opens with the message already written to sunraynice@gmail.com, in the language of the page, and they just press send.
@@ -42,3 +47,7 @@ Search and replace in all the `.html` files and in `assets/js/main.js`:
 - `06&nbsp;56&nbsp;85&nbsp;83&nbsp;34` (the number as shown)
 - `+33656858334` (the number in "tap to call" links)
 - `sunraynice@gmail.com`
+
+## Old files no longer used
+
+These came with the first version and can be deleted: `favicon.svg`, `assets/img/logo-sunray.svg`, `assets/img/logo-sunray-blanc.svg`, `assets/img/soleil.svg`.

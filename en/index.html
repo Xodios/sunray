@@ -17,8 +17,8 @@
   <meta property="og:image" content="../assets/img/og-sunray-en.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="preload" href="../assets/fonts/lexend-latin-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -77,7 +77,10 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="SunRay, back to top">
-        <img src="../assets/img/logo-sunray.svg" alt="" width="104" height="58">
+        <picture>
+          <source type="image/webp" srcset="../assets/img/logo-sunray-240.webp 1x, ../assets/img/logo-sunray-420.webp 2x">
+          <img src="../assets/img/logo-sunray-240.jpg" srcset="../assets/img/logo-sunray-240.jpg 1x, ../assets/img/logo-sunray-420.jpg 2x" alt="" width="237" height="240">
+        </picture>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
@@ -355,8 +358,8 @@
           <a class="btn btn-light" href="mailto:sunraynice@gmail.com?subject=Partnership%20with%20SunRay">
             <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Propose a partnership
           </a>
-          <a class="btn btn-outline-light" href="mailto:sunraynice@gmail.com?subject=I%20would%20like%20to%20help%20SunRay">
-            <svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg>Offer my help
+          <a class="btn btn-outline-light" href="mailto:sunraynice@gmail.com?subject=I%20would%20like%20to%20make%20a%20donation%20to%20SunRay">
+            <svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg>Make a donation
           </a>
         </div>
       </div>
@@ -426,7 +429,12 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="../assets/img/logo-sunray-blanc.svg" alt="SunRay" width="130" height="72">
+        <div class="footer-logo">
+        <picture>
+          <source type="image/webp" srcset="../assets/img/logo-sunray-240.webp 1x, ../assets/img/logo-sunray-420.webp 2x">
+          <img src="../assets/img/logo-sunray-240.jpg" srcset="../assets/img/logo-sunray-240.jpg 1x, ../assets/img/logo-sunray-420.jpg 2x" alt="SunRay" width="237" height="240">
+        </picture>
+        </div>
         <p>A ray of sunshine for success</p>
       </div>
       <ul class="footer-contact">

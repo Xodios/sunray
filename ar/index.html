@@ -17,8 +17,8 @@
   <meta property="og:image" content="../assets/img/og-sunray-ar.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png">
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="preload" href="../assets/fonts/lexend-latin-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/readex-pro-arabic-var.woff2" as="font" type="font/woff2" crossorigin>
@@ -78,7 +78,10 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="SunRay، العودة إلى أعلى الصفحة">
-        <img src="../assets/img/logo-sunray.svg" alt="" width="104" height="58">
+        <picture>
+          <source type="image/webp" srcset="../assets/img/logo-sunray-240.webp 1x, ../assets/img/logo-sunray-420.webp 2x">
+          <img src="../assets/img/logo-sunray-240.jpg" srcset="../assets/img/logo-sunray-240.jpg 1x, ../assets/img/logo-sunray-420.jpg 2x" alt="" width="237" height="240">
+        </picture>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
@@ -356,8 +359,8 @@
           <a class="btn btn-light" href="mailto:sunraynice@gmail.com?subject=%D8%B4%D8%B1%D8%A7%D9%83%D8%A9%20%D9%85%D8%B9%20SunRay">
             <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>اقتراح شراكة
           </a>
-          <a class="btn btn-outline-light" href="mailto:sunraynice@gmail.com?subject=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9%20SunRay">
-            <svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg>تقديم المساعدة
+          <a class="btn btn-outline-light" href="mailto:sunraynice@gmail.com?subject=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%A8%D8%B1%D9%91%D8%B9%20%D9%84%D8%AC%D9%85%D8%B9%D9%8A%D8%A9%20SunRay">
+            <svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg>تقديم تبرّع
           </a>
         </div>
       </div>
@@ -427,7 +430,12 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="../assets/img/logo-sunray-blanc.svg" alt="SunRay" width="130" height="72">
+        <div class="footer-logo">
+        <picture>
+          <source type="image/webp" srcset="../assets/img/logo-sunray-240.webp 1x, ../assets/img/logo-sunray-420.webp 2x">
+          <img src="../assets/img/logo-sunray-240.jpg" srcset="../assets/img/logo-sunray-240.jpg 1x, ../assets/img/logo-sunray-420.jpg 2x" alt="SunRay" width="237" height="240">
+        </picture>
+        </div>
         <p>شعاع شمس نحو النجاح</p>
       </div>
       <ul class="footer-contact">
